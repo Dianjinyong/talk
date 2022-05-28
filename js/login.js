@@ -34,7 +34,7 @@ const loginIdValodator = new FieldValidator("txtLoginId", async function (val) {
     if (resp.code === 0) {
       //如果响应体的code为0 没有错误
       alert("登陆成功，点击确定，跳转到首页"); //弹窗告诉说注册成功
-      location.href = `../index.html`; //跳转到登陆界面
+      location.href = baseURL + "index.html"; //跳转到登陆界面
     }else{
         loginPwdValidator.p.innerText = '账号或密码错误';
         loginIdValodator.input.value = '';

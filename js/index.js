@@ -7,7 +7,7 @@
   if (!user) {
     //判断user信息 如果没有登陆为null 登陆了则显示为一个对象
     alert("未登录或登陆已过期，请重新登陆"); //弹窗显示
-    location.href = "../login.html"; //跳转到登陆界面
+    location.href = baseURL + "login.html"; //跳转到登陆界面
     return; //不在往后执行
   }
 
@@ -27,7 +27,7 @@
   //注销事件
   doms.close.onclick = function () {
     API.loginOut(); //注销的函数
-    location.href = "../login.html"; //跳转到登陆页面
+    location.href = baseURL + "login.html"; //跳转到登陆页面
   };
 
   await loadHistory(); //加载历史记录
